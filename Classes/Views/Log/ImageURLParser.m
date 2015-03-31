@@ -244,7 +244,7 @@
             return [NSString stringWithFormat:@"http://img.youtube.com/vi/%@/default.jpg", vid];
         }
     }
-    return nil;
+    return url;
 }
 
 @end

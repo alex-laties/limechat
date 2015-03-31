@@ -94,14 +94,14 @@
 
 - (void)setHidden:(BOOL)value
 {
-    if (_hidden == value) return;
-    _hidden = value;
+    if (_hiding == value) return;
+    _hiding = value;
     [self adjustSubviews];
 }
 
 - (void)drawDividerInRect:(NSRect)rect
 {
-    if (_hidden) return;
+    if (_hiding) return;
 
     if ([self isVertical]) {
         [[NSColor colorWithCalibratedWhite:0.65 alpha:1] set];
@@ -152,7 +152,7 @@
     NSRect fixedFrame = fixedView.frame;
     NSRect flyingFrame = flyingView.frame;
 
-    if (_hidden) {
+    if (_hiding) {
         if ([self isVertical]) {
             fixedFrame = NSMakeRect(0, 0, 0, height);
             flyingFrame.origin = NSZeroPoint;
