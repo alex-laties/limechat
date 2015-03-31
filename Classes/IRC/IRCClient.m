@@ -2918,14 +2918,14 @@
         }
 
         NSString* text = [NSString stringWithFormat:@"%@ has changed mode: %@", nick, modeStr];
-        [self printBoth:(c ?: (id)target) type:LINE_TYPE_MODE text:text timestamp:m.timestamp];
+        //[self printBoth:(c ?: (id)target) type:LINE_TYPE_MODE text:text timestamp:m.timestamp];
     }
     else {
         // user mode
         [_myMode update:modeStr];
 
         NSString* text = [NSString stringWithFormat:@"%@ has changed mode: %@", nick, modeStr];
-        [self printBoth:nil type:LINE_TYPE_MODE text:text timestamp:m.timestamp];
+        //[self printBoth:nil type:LINE_TYPE_MODE text:text timestamp:m.timestamp];
         [self updateClientTitle];
     }
 }
