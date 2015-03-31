@@ -291,12 +291,12 @@
         LOG(@"Ignore non-image image URL: %@ (%@)", url, contentType);
         return;
     }
-
+/*
     if (contentLength > INLINE_IMAGE_MAX_SIZE) {
         LOG(@"Ignore too big image: %@ (%qi bytes)", url, contentLength);
         return;
     }
-
+*/
     DOMHTMLDocument* doc = (DOMHTMLDocument*)[[_view mainFrame] DOMDocument];
     if (!doc) return;
 
